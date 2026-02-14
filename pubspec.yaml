@@ -1,0 +1,22 @@
+name: clever_metal_tracker
+description: Clever Metal Industries Employee Tracker
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.0
+  shared_preferences: ^2.2.2
+  call_log: ^4.0.0
+  permission_handler: ^11.1.0
+  workmanager: ^0.5.2
+  device_info_plus: ^9.1.1
+  connectivity_plus: ^5.0.2
+  intl: ^0.19.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
