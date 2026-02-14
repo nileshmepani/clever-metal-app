@@ -12,6 +12,19 @@ jobs:
         with:
           flutter-version: '3.22.0'
           channel: 'stable'
+      - name: Create Flutter project
+        run: |
+          cd /tmp
+          flutter create --org com.clevermetal clever_metal_tracker
+          cp -r /tmp/clever_metal_tracker/android $GITHUB_WORKSPACE/
+          cp -r /tmp/clever_metal_tracker/ios $GITHUB_WORKSPACE/
+          cp -r /tmp/clever_metal_tracker/test $GITHUB_WORKSPACE/
+          cp /tmp/clever_metal_tracker/analysis_options.yaml $GITHUB_WORKSPACE/
+      - name: Copy our code
+        run: |
+          cp lib/main.dart lib/main.dart
+          cp pubspec.yaml pubspec.yaml
+          cp android/app/src/main/AndroidManifest.xml android/app/src/main/AndroidManifest.xml
       - run: flutter pub get
       - run: flutter build apk --release --no-tree-shake-icons
       - uses: actions/upload-artifact@v4
