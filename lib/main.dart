@@ -9,7 +9,7 @@ import 'package:workmanager/workmanager.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:intl/intl.dart';
 
-const String API_BASE = 'http://34.18.76.47:3000/api';
+const String API_BASE = 'https://clevermetal.online/api';
 
 @pragma('vm:entry-point')
 void callbackDispatcher() {
